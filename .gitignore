@@ -21,3 +21,6 @@ aoc2015-*.tar
 
 # Temporary files, for example, from tests.
 /tmp/
+
+# MacOS
+.DS_Store
