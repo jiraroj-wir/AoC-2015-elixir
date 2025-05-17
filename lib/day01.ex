@@ -17,7 +17,7 @@ defmodule AOC2015.Day01 do
   read the puzzle input file
   """
   def input do
-    File.read!("priv/inputs/day1.txt")
+    File.read!("priv/inputs/day01.txt")
   end
 
   @doc """
