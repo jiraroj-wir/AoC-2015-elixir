@@ -9,10 +9,10 @@ defmodule AOC2015.Day02Test do
     end
   end
 
-  """
   describe "part2/1" do
-    test "returns index where Santa enters basement" do
+    test "returns total ribbon length" do
+      assert Day02.part2("2x3x4") == 34
+      assert Day02.part2("1x1x10") == 14
     end
   end
-  """
 end
