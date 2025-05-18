@@ -1,46 +1,62 @@
 <p align="center">
-  <!-- Replace with full Advent of Code 2015 tree image -->
+  <!-- Replace the path when the tree is complete -->
   <img src="path/to/aoc2015-tree.png" alt="Advent of Code 2015 Tree"/>
 </p>
 
-# 🎄 Advent of Code 2015 — in Elixir
+# 🎄 Advent of Code 2015 — in **Elixir**
 
-Ho ho huh? It's not December? Who cares.
+> *“Ho-ho-hold my pipe operator.”*  
 
-This is a completely out-of-season dive into [Advent of Code 2015](https://adventofcode.com/2015) using the majestic, tuple-loving, pipe-obsessed, pattern-matching paradise that is **Elixir**.
+I decided to tackle the classic [Advent of Code 2015](https://adventofcode.com/2015) with a language that treats tuples like royalty, pattern-matches in its sleep, and runs on the indestructible BEAM: **Elixir**. It’s functional, succinct, expressive, and—most importantly—makes me feel clever every time I write `|>`.
 
-Elixir feels like what would happen if Erlang and Ruby had a beautiful, functional child who documents its code, writes tests automatically, and runs on BEAM caffeine.
+---
 
-This repo is mostly me poking at functional concepts, appreciating immutability, and occasionally muttering “wow, that's clean” while solving some nerdy elf problems.
+## ✨ Why Elixir?
+
+* Functional playground (recursion everywhere, side-effects nowhere).  
+* Powered by Erlang/OTP — battle-tested for distributed systems and networking.  
+* `mix` for painless build & test tooling, `iex` for REPL happiness.  
+* Pipes (`|>`) that turn data flow into poetry.
 
 ---
 
 ## 🧰 Environment
 
 ```bash
-Erlang/OTP 27 [erts-15.2.7] [source] [64-bit] [smp:8:8] [ds:8:8:10] [async-threads:1] [jit] [dtrace]
+Erlang/OTP 27 [erts-15.2.7] [64-bit] [smp:8:8] [jit]
 Elixir 1.18.3 (compiled with Erlang/OTP 27)
 ```
 
+Any recent Elixir ≥ 1.18 plus OTP 27 should work fine.
+
 ---
 
-## 📁 Project Structure
+## 📁 Project Layout
 
-```bash
+```
 .
-├── lib/              # Main solution code (one module per day)
-├── test/             # Tests based on example cases from AoC site
-├── priv/inputs/      # My input.txt files (replace with your own)
-├── stories/          # AI-generated summaries of each day’s problem
-├── mix.exs           # Standard Elixir project config
-└── README.md         # You are here
+├── lib/                # One module per day (Day01, Day02…)
+├── priv/inputs/        # My puzzle inputs (yours will differ)
+├── stories/            # AI-generated dramatic summaries
+├── test/               # Asserted examples straight from AoC
+└── mix.exs             # Project configuration
+```
+
+Each day’s module contains `part1/0`, `part1/1`, `part2/0`, `part2/1`:
+
+```elixir
+iex> AOC2015.Day01.part1()
+232  # => Santa’s final floor
+
+iex> AOC2015.Day01.part2()
+1783 # => First position that hits the basement
 ```
 
 ---
 
 ## 🧪 Running Tests
 
-This project includes small unit tests based on AoC example data. You can run them all with:
+Tests mirror the official examples—nothing fancy, just *green or red*:
 
 ```bash
 mix test
@@ -48,31 +64,29 @@ mix test
 
 ---
 
-## 📄 Input Files
+## 📜 Inputs
 
-Each day’s input is stored in `priv/inputs/` as `dayXX.txt`.  
-Since AoC gives everyone a unique input, you'll probably need to plug in your own to get your actual solutions.
+Puzzle inputs live in `priv/inputs/dayXX.txt`.  
+Advent of Code gives each participant a unique file, so swap in yours if you’re comparing answers.
 
 ---
 
-## 📚 Stories
+## 📚 AI Story Time
 
-I asked an AI to write short summaries of each problem, and it did.  
-They're in `stories/dayXX.md` — light-hearted and slightly dramatic retellings of what the elves are up to.
+Because elves deserve fan-fiction, every solved day gets an **AI-generated, bite-sized, mildly poetic recap** in `stories/`. Imagine Santa starring in a Shakespearian ankle-deep snowdrift.
+
+---
+
+## 📝 My Post-Mortem on Elixir (to be continued…)
+
+> *Thoughts, rants, and “aha!” moments after finishing all 25 days will appear here.*
 
 ---
 
 ## ❌ License
 
-Unlicensed — do whatever you want with this.  
-Fork it, study it, trash it, print it out and fold it into a Christmas ornament. I won’t stop you.
+**Unlicense** — public domain. Copy it, fork it, tattoo it on a reindeer.
 
 ---
 
-<!-- TODO: When finished, update this section to show it's complete -->
-<!-- ☑️ AoC 2015 Elixir solutions: COMPLETE! -->
-<!-- ❗ WIP – still solving days. Will finalize and polish after Day 25 -->
-
----
-
-Enjoy the puzzles. Praise the pipes. And may your recursion always find a base case. 🧝‍♂️
+Thanks for dropping by. May your recursion always find a base case, and may the pipes be ever in your favour. 🌟
