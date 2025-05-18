@@ -24,3 +24,22 @@ aoc2015-*.tar
 
 # MacOS
 .DS_Store
+
+# ElixirLS (Elixir Language Server) build artifacts
+.elixir_ls/
+
+# Nix environment files (if you or others use Nix)
+result/
+*.drv
+*.nix
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+/log/
+*.log
+
+# Erlang cookie (for distributed nodes)
+.erlang.cookie
