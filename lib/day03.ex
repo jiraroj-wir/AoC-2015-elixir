@@ -1,6 +1,18 @@
 defmodule AOC2015.Day03 do
   @moduledoc """
+  ## Day 02 - Perfectly Spherical Houses in a Vacuum
 
+  santa deliver presents in a 2d grid, starting from (0, 0), when
+  - '^' means go up (y + 1)
+  - '>' means go right (x + 1)
+  - 'v' means go down (y - 1)
+  - '<' means go left (x - 1)
+
+  ### Part 1
+  santa moves around by the eggnogged elf instructions, find the number of houses he visits 
+
+  ### Part 2
+  now there's robo-santa that will take turns moving with santa, find the number of houses they visits. 
   """
 
   @doc """
@@ -16,7 +28,7 @@ defmodule AOC2015.Day03 do
   def part1(), do: part1(input())
 
   @doc """
-
+  returns santa visited node (mapset) size after all moves
   """
   def part1(input) do
     moves = String.graphemes(input)
@@ -43,7 +55,7 @@ defmodule AOC2015.Day03 do
   def part2(), do: part2(input())
 
   @doc """
-
+  returns santa and robo-santa visited node (mapset) size after all moves
   """
 
   def part2(input) do
