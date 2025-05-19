@@ -3,8 +3,8 @@
 ### Preface
 
 Functional programming syntax – checked  
-No LSP server – checked  
-Tested on the examples – check  
+No LSP server warnings – checked  
+Mix test – check  
 Everything went well.
 
 Until...

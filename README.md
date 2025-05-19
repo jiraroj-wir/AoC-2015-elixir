@@ -81,6 +81,8 @@ Because elves deserve fan-fiction, every solved day gets an **AI-generated, bite
 
 > *Thoughts, rants, and “aha!” moments after finishing all 25 days will appear here.*
 
+Meanwhile, you could follow my struggles at [MEMO.md](MEMO.md)
+
 ---
 
 ## ❌ License
