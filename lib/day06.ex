@@ -1,4 +1,21 @@
 defmodule AOC2015.Day06 do
+  @moduledoc """
+  ## Day 6 - Probably a Fire Hazard
+
+  santa sent you an instruciton for lights display, so you could beat your neighbours
+  - turn on x1, y1 through x2, y2
+  - turn off x1, y1 through x2, y2
+  - toggle x1, y1 through x2, y2
+
+  ### Part 1
+  Do it as the instructions said, how many lights were turned on at the end
+
+  ### Part 2
+  whats the total brightness when
+  - turn on means +1 brightness
+  - turn off means -1 brightness
+  - toggle means +2 brightness
+  """
   @doc """
   read the puzzle input file
   """
