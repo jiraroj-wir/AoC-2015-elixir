@@ -3,7 +3,7 @@ defmodule AOC2015.Day07Test do
   alias AOC2015.Day07
 
   describe "part1/1" do
-    test "returns total wrapping paper's area" do
+    test "returns each wire signal" do
       input = """
         123 -> x
         456 -> y
@@ -26,11 +26,8 @@ defmodule AOC2015.Day07Test do
     end
   end
 
-  """
   describe "part2/1" do
-    test "returns total ribbon length" do
-      assert Day02.part2("1x1x10") == 14
+    test "returns each wire signal" do
     end
   end
-  """
 end

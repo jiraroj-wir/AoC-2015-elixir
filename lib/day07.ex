@@ -27,6 +27,29 @@ defmodule AOC2015.Day07 do
     value
   end
 
+  @doc """
+  wrapper around part2, reads the puzzle input and return the answer for part 2
+  """
+  def part2(), do: part2(input(), "a")
+
+  def part2(input, target) do
+    signal_a = part1()
+
+    instruction_map =
+      input
+      |> String.split("\n", trim: true)
+      |> Enum.map(fn line ->
+        [expr, target] = String.split(line, " -> ", trim: true)
+        {String.trim(target), String.trim(expr)}
+      end)
+      |> Map.new()
+
+    instruction_map = Map.put(instruction_map, "b", Integer.to_string(signal_a))
+
+    {value, _cache} = lazy_evaluate(instruction_map, target)
+    value
+  end
+
   def lazy_evaluate(instructions, wire, cache \\ %{}) do
     cond do
       is_number_literal(wire) ->
