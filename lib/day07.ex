@@ -13,6 +13,9 @@ defmodule AOC2015.Day07 do
   """
   def part1(), do: part1(input(), "a")
 
+  @doc """
+  takes a list of instructions, split and map them, then call `memoized_recursion/2`, which in the end should return wire signal value for target
+  """
   def part1(input, target) do
     instruction_map =
       input
@@ -23,7 +26,7 @@ defmodule AOC2015.Day07 do
       end)
       |> Map.new()
 
-    {value, _cache} = lazy_evaluate(instruction_map, target)
+    {value, _cache} = memoized_recursion(instruction_map, target)
     value
   end
 
@@ -32,6 +35,9 @@ defmodule AOC2015.Day07 do
   """
   def part2(), do: part2(input(), "a")
 
+  @doc """
+  same as `part1/2`, just run `part1/2` first for `signal_a`, then replace expr of wire `b` with `signal_a` and call `memoized_recursion/2` - just like `part1/2`
+  """
   def part2(input, target) do
     signal_a = part1()
 
@@ -46,11 +52,16 @@ defmodule AOC2015.Day07 do
 
     instruction_map = Map.put(instruction_map, "b", Integer.to_string(signal_a))
 
-    {value, _cache} = lazy_evaluate(instruction_map, target)
+    {value, _cache} = memoized_recursion(instruction_map, target)
     value
   end
 
-  def lazy_evaluate(instructions, wire, cache \\ %{}) do
+  @doc """
+  the main idea here is to recursively find the root expression that forms a target `wire`. 
+  so, you check if the target `wire`'s expression in the `instructions` map or the `cache` map is a number or not. 
+  if so, just return it. otherwise, you need to find the value of the `wire` in the expression that forms its value.
+  """
+  def memoized_recursion(instructions, wire, cache \\ %{}) do
     cond do
       is_number_literal(wire) ->
         {String.to_integer(wire), cache}
@@ -77,28 +88,28 @@ defmodule AOC2015.Day07 do
 
     case parts do
       [a] ->
-        lazy_evaluate(instructions, a, cache)
+        memoized_recursion(instructions, a, cache)
 
       ["NOT", x] ->
-        {val, c} = lazy_evaluate(instructions, x, cache)
+        {val, c} = memoized_recursion(instructions, x, cache)
         {~~~val &&& 0xFFFF, c}
 
       [a, "AND", b] ->
-        {va, c1} = lazy_evaluate(instructions, a, cache)
-        {vb, c2} = lazy_evaluate(instructions, b, c1)
+        {va, c1} = memoized_recursion(instructions, a, cache)
+        {vb, c2} = memoized_recursion(instructions, b, c1)
         {va &&& vb, c2}
 
       [a, "OR", b] ->
-        {va, c1} = lazy_evaluate(instructions, a, cache)
-        {vb, c2} = lazy_evaluate(instructions, b, c1)
+        {va, c1} = memoized_recursion(instructions, a, cache)
+        {vb, c2} = memoized_recursion(instructions, b, c1)
         {va ||| vb, c2}
 
       [a, "LSHIFT", n] ->
-        {va, c} = lazy_evaluate(instructions, a, cache)
+        {va, c} = memoized_recursion(instructions, a, cache)
         {va <<< String.to_integer(n), c}
 
       [a, "RSHIFT", n] ->
-        {va, c} = lazy_evaluate(instructions, a, cache)
+        {va, c} = memoized_recursion(instructions, a, cache)
         {va >>> String.to_integer(n), c}
     end
   end
