@@ -11,12 +11,12 @@ defmodule AOC2015.Day08Test do
     end
   end
 
-  """
   describe "part2/1" do
-    test "return total brightness" do
-      assert Day06.part2("turn on 0,0 through 0,0") == 1
-      assert Day06.part2("toggle 0,0 through 999,999") == 2_000_000
+    test "return the difference between number of character in the newly encoded string and the initial ones" do
+      assert Day08.part2("\"\"\n") == 4
+      assert Day08.part2("\"abc\"\n") == 4
+      assert Day08.part2("\"aaa\\\"aaa\"\n") == 6
+      assert Day08.part2("\"\\x27\"\n") == 5
     end
   end
-  """
 end
