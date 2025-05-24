@@ -1,6 +1,6 @@
 defmodule AOC2015.Day03 do
   @moduledoc """
-  ## Day 02 - Perfectly Spherical Houses in a Vacuum
+  ## Day 03 - Perfectly Spherical Houses in a Vacuum
 
   santa deliver presents in a 2d grid, starting from (0, 0), when
   - '^' means go up (y + 1)
