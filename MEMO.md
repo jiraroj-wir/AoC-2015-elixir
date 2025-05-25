@@ -50,12 +50,3 @@ And boom — `346386` — AC!
 * Never forget to trim your input strings  
 * Or you’ll be ghosted by a newline  
 * Literally
-
-
-### Day 5: Downhill Slip
-
-## My Thoughts
-The storm (Day 4) just passed — thought I'd get a break, a nice downhill cycle for a while. But nope, I slipped on the ragex module.
-It was pretty hard to comprehend. But string operations are, in general, one of the finest aspects of functional programming languages, aren't they?
-
-The code is still very short and elegant, though. But the ragex operations feel like dark magic — at least for now.
