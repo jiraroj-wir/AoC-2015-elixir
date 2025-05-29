@@ -15,10 +15,12 @@ defmodule AOC2015.Day12Test do
     end
   end
 
-  """
-    describe "part2/1" do
-      test "returns the first number that starts with '000000' when hash with MD5" do
-      end
+  describe "part2/1" do
+    test "returns the sum ignoring any object with 'red'" do
+      assert Day12.part2("[1,2,3]") == 6
+      assert Day12.part2("[1,{\"c\":\"red\",\"b\":2},3]") == 4
+      assert Day12.part2("{\"d\":\"red\",\"e\":[1,2,3,4],\"f\":5}") == 0
+      assert Day12.part2("[1,\"red\",5]") == 6
     end
-  """
+  end
 end
