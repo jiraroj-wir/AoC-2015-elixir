@@ -1,4 +1,17 @@
 defmodule AOC2015.Day12 do
+  @moduledoc """
+  ## Day 12 - JSAbacusFramework.io
+
+  given a json file structure
+
+  ## Part 1
+  find the sum of all the numbers, including the `-` character as minus sign
+
+  ## Part 2
+  just like part 1, but this time ignore any object with `"red"` value in it.
+  - `{}`: object <- this one
+  - `[]`: array
+  """
   @doc """
   read the puzzle input file
   """
@@ -11,6 +24,9 @@ defmodule AOC2015.Day12 do
   """
   def part1(), do: part1(input())
 
+  @doc """
+  scan the whole json (as text file) with regex, cleans the list and return the sum of all numbers
+  """
   def part1(input) do
     Regex.scan(~r/-?\d+/, input)
     |> List.flatten()
@@ -23,6 +39,10 @@ defmodule AOC2015.Day12 do
   """
   def part2(), do: part2(input())
 
+  @doc """
+  this one, I don't think its possible to do with regex, so we use `jason` - a json file package.
+  after decoding the json into a map, pass it to `sum_without_red/1` that gradually search through the json tree - only counts the ones without `"red"` values
+  """
   def part2(input) do
     input
     |> Jason.decode!()
