@@ -50,3 +50,69 @@ And boom — `346386` — AC!
 * Never forget to trim your input strings  
 * Or you’ll be ghosted by a newline  
 * Literally
+
+
+---
+
+
+## Day 14: 9 Deer, 8 Cores — Let’s async It!
+
+### Preface
+
+Read the problem — nine deer, racing in parallel.  
+My brain immediately went: **multicore**.  
+And with my **M1 chip**?  
+Well, seems like a good excuse to finally try some concurrency in Elixir.  
+Let’s go.
+
+---
+
+### Process
+
+After reading the task docs from [Hexdocs](https://hexdocs.pm/elixir/1.12/Task.html), I found out I just needed to do:
+
+```elixir
+Task.async(fn -> ... end)
+Task.await(task)
+```
+
+That’s all.  
+Not that different from Go’s goroutines, actually.  
+Spawn a bunch of workers, wait for results — no fuss.
+
+---
+
+### Theoretical yapping session
+
+Talking about time complexity:
+
+```
+Part 1:  O(1)  (kind of, since we parallelize per deer, and there are only 9 deer)
+Part 2:  O(n)  where n = race duration (2503 seconds), since we simulate each second
+```
+
+So, while it’s not some groundbreaking parallel optimization like:
+
+> “pushing a convolution filter across a 4K image with SIMD on 32 threads,”
+
+…it still gave a nice speed-up.  
+And more importantly, it got me thinking about distributed computing in a hands-on way.
+
+---
+
+### My thoughts
+
+I liked it.  
+The `Task` module (is that what we call it?) is super approachable and easy to use.
+
+No weird setup.  
+No scary boilerplate.  
+Just fire off work, collect results.
+
+It gave me real intuition for how to approach **distributed-ish** problems —  
+without scaring me off with words like “actor model” or “message passing.”
+
+Elixir made it **painless**, and kind of fun.  
+Which is rare for parallel anything.
+
+---
