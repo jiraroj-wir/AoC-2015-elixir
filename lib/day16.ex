@@ -31,7 +31,7 @@ defmodule AOC2015.Day16 do
   end
 
   @doc """
-  Wrapper for part 1
+  wrapper around part1, reads the puzzle input and return the answer for part 1
   """
   def part1(), do: part1(input())
 
@@ -77,7 +77,7 @@ defmodule AOC2015.Day16 do
   end
 
   @doc """
-  Wrapper for part 1
+  wrapper around part2, reads the puzzle input and return the answer for part 2
   """
   def part2(), do: part2(input())
 
