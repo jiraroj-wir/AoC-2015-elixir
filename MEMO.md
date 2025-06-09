@@ -115,4 +115,52 @@ without scaring me off with words like “actor model” or “message passing.�
 Elixir made it **painless**, and kind of fun.  
 Which is rare for parallel anything.
 
+
+---
+
+
+## Day 19: Dark Magic
+
+### Preface
+
+Part 1, nothing hard, feeling like usual.  
+Then Part 2...
+
+I realize that the initial approach I used for Part 1 wouldn't work —  
+time complexity goes crazily high, like **O(3^300)**.
+
+So, I did the reverse-greedy approach: reversing the replacement key  
+and trying to deconstruct the given string into a single `"e"`.  
+Then the problem came.
+
+When I ran `mix test`, `part2/1` always returned `nil` and failed the test.  
+Took me a while to fix it — then it's ChatGPT's job to fix it.  
+Close, but still failed some tests.
+
+Eventually I gave up and just asked for solutions from ChatGPT.  
+And it gave me that **dark magic code**.
+
+→ [`lib/day19.ex:52`](lib/day19.ex#L52)
+
+---
+
+### Thoughts
+
+Surprisingly... it works.  
+Really well. Probably **O(n)** complexity — which is insane, considering how doomed I felt.
+
+This problem gave me a real look at the "*side effects*" of Elixir —  
+not in the traditional sense, but in how sometimes doing things "the normal way"  
+just isn't feasible.
+
+---
+
+### Moral of the story
+
+```text
+Sometimes you need to rethink the problem.  
+Sometimes you need to brute-force cleverly.  
+And sometimes… you just accept the wizard’s (ChatGPT’s) dark magic and move on.
+```
+
 ---
