@@ -11,6 +11,9 @@ defmodule AOC2015.Day19 do
   """
   def part1(), do: part1(input())
 
+  @doc """
+  we just get all the keys and a base string, then just use `generate_all_replacements/2` to generate all replacements and return its MapSet length
+  """
   def part1(input) do
     [replacement_chunk, molecule] =
       input
@@ -34,6 +37,9 @@ defmodule AOC2015.Day19 do
   """
   def part2(), do: part2(input())
 
+  @doc """
+  I don't know whats happening, asked chatGPT and it just gives me this formula
+  """
   def part2(input) do
     [_, raw] = String.split(input, ~r/\n\s*\n/, trim: true)
     mol = String.trim(raw)
@@ -54,6 +60,9 @@ defmodule AOC2015.Day19 do
     end
   end
 
+  @doc """
+  go through all the `replacements`, use regex to find every char set that can be replaced, apply the replacement and put it into the MapSet
+  """
   def generate_all_replacements(molecule, replacements) do
     replacements
     |> Enum.reduce(MapSet.new(), fn {from, to}, acc ->
