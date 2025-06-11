@@ -1,6 +1,6 @@
 <p align="center">
   <!-- Replace the path when the tree is complete -->
-  <img src="path/to/aoc2015-tree.png" alt="Advent of Code 2015 Tree"/>
+  <img src="priv/AoC2015\ tree.png" alt="Advent of Code 2015 Tree"/>
 </p>
 
 # 🎄 Advent of Code 2015 — in **Elixir**
