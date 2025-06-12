@@ -1,14 +1,14 @@
-<p align="center">
-  <img src="priv/AoC2015_tree.png" alt="Advent of Code 2015 Tree" style="max-width: 100%; height: auto;">
-</p>
-
-
 # 🎄 Advent of Code 2015 — in **Elixir**
 
 > *“Ho-ho-hold my pipe operator.”*  
 
-I decided to tackle the classic [Advent of Code 2015](https://adventofcode.com/2015) with a language that treats tuples like royalty, pattern-matches in its sleep, and runs on the indestructible BEAM: **Elixir**. It’s functional, succinct, expressive, and—most importantly—makes me feel clever every time I write `|>`.
+I decided to tackle the classic [Advent of Code 2015](https://adventofcode.com/2015)...
 
+<div align="center" style="background-color: #0f0f23; padding: 1rem; border-radius: 8px; margin: 1.5rem 0;">
+  <img src="priv/AoC2015_tree.png" alt="Advent of Code 2015 Tree" style="max-width: 300px; height: auto;">
+  <br>
+  <sub><i>25 days done — The tree is complete!</i></sub>
+</div>
 ---
 
 ## ✨ Why Elixir?
