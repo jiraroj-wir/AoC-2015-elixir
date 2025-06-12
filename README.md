@@ -88,6 +88,8 @@ Meanwhile, you could follow my struggles at [MEMO.md](MEMO.md)
 
 Thanks for dropping by. May your recursion always find a base case, and may the pipes be ever in your favour. 🌟
 
+---
+
 <p align="center" style="margin-top: 2rem;">
   <img src="priv/AoC2015_tree.png" alt="Completed AoC2015 Tree" style="width: 100%; max-width: none;">
 </p>
