@@ -2,13 +2,8 @@
 
 > *“Ho-ho-hold my pipe operator.”*  
 
-I decided to tackle the classic [Advent of Code 2015](https://adventofcode.com/2015)...
+I decided to tackle the classic [Advent of Code 2015](https://adventofcode.com/2015) with a language that treats tuples like royalty, pattern-matches in its sleep, and runs on the indestructible BEAM: **Elixir**. It’s functional, succinct, expressive, and—most importantly—makes me feel clever every time I write `|>`.
 
-<div align="center" style="background-color: #0f0f23; padding: 1rem; border-radius: 8px; margin: 1.5rem 0;">
-  <img src="priv/AoC2015_tree.png" alt="Advent of Code 2015 Tree" style="max-width: 300px; height: auto;">
-  <br>
-  <sub><i>25 days done — The tree is complete!</i></sub>
-</div>
 ---
 
 ## ✨ Why Elixir?
@@ -92,3 +87,7 @@ Meanwhile, you could follow my struggles at [MEMO.md](MEMO.md)
 ---
 
 Thanks for dropping by. May your recursion always find a base case, and may the pipes be ever in your favour. 🌟
+
+<p align="center" style="margin-top: 2rem;">
+  <img src="priv/AoC2015_tree.png" alt="Completed AoC2015 Tree" style="width: 100%; max-width: none;">
+</p>
