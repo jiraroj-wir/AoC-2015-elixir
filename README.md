@@ -1,7 +1,7 @@
 <p align="center">
-  <!-- Replace the path when the tree is complete -->
-  <img src="priv/AoC2015_tree.png" alt="Advent of Code 2015 Tree"/>
+  <img src="priv/AoC2015_tree.png" alt="Advent of Code 2015 Tree" style="max-width: 100%; height: auto;">
 </p>
+
 
 # 🎄 Advent of Code 2015 — in **Elixir**
 
