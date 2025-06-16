@@ -84,9 +84,7 @@ Would I recommend Elixir for AoC or competitive programming? Probably not. But i
 
 At the end of the day, Elixir is a functional language that encourages immutability, composability, and clean code. It won’t solve the problem for you — but it’ll make you feel clever solving it.
 
-> *Thoughts, rants, and “aha!” moments after finishing all 25 days will appear here.*
-
-For deeper thoughts, odd bugs, and Elixir lessons learned, see [MEMO.md](MEMO.md).
+> For deeper thoughts, odd bugs, and Elixir lessons learned, see [MEMO.md](MEMO.md).
 
 ---
 
