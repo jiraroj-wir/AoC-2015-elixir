@@ -72,11 +72,21 @@ Because elves deserve fan-fiction, every solved day gets an **AI-generated, bite
 
 ---
 
-## 📝 My Post-Mortem on Elixir (to be continued…)
+## 📝 My Post-Mortem on Elixir
+
+Elixir is beautiful — succinct, expressive, and reads almost like pseudocode when you get into the flow with `Enum`, `map`, and `|>`. The language encourages good habits: pure functions, clear flow, and testable components. `Task.async/await` and pattern matching made parallelism and control flow feel natural, not scary.
+
+That said, I’ve only scratched the surface. Advent of Code taught me a lot about Elixir's syntax and idioms, but the real power lies deeper — in the BEAM VM, distributed systems, and the concurrent magic Elixir is known for.
+
+Elixir doesn’t make implementing things easier — quite the opposite sometimes — but once it *works*, and you’ve got full test coverage, you can sleep well knowing it won’t break randomly.
+
+Would I recommend Elixir for AoC or competitive programming? Probably not. But if you want to learn Elixir, then doing something like AoC is a great playground. You'll pick up real intuition fast. The ecosystem (`mix`, docs, tests) supports that kind of exploration really well.
+
+At the end of the day, Elixir is a functional language that encourages immutability, composability, and clean code. It won’t solve the problem for you — but it’ll make you feel clever solving it.
 
 > *Thoughts, rants, and “aha!” moments after finishing all 25 days will appear here.*
 
-Meanwhile, you could follow my struggles at [MEMO.md](MEMO.md)
+For deeper thoughts, odd bugs, and Elixir lessons learned, see [MEMO.md](MEMO.md).
 
 ---
 

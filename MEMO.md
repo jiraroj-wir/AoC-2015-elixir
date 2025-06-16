@@ -163,4 +163,43 @@ Sometimes you need to brute-force cleverly.
 And sometimes… you just accept the wizard’s (ChatGPT’s) dark magic and move on.
 ```
 
+
+---
+
+
+## Day 21 - 22
+
+This mf is nightmare to do: brute force with early exits and other optimization technique ..., lets dont talk about it. 
+
+
+---
+
+
+## General thoughts
+(aka things I bumped into regularly — maybe call this “Dev Notes” or “Workflow Habits”? idk)
+
+- Regex and string module can be hard at first, but mastering it can help a lot, it turns a dozens of lines of code into a expressive syntax in a single line.
+- The trend of myself using the same technique or module that has been proven works: reduce, map, then (for return) and pattern matching. I try new things though, just that most part are done with the same technique.
+- Implement higher abstraction or algorithms can be a nightmare, I can imagine how hard it’ll be to implement stuff like Rabin-karp or recursive 0/1 knapsack.
+- I kinda get how “let it crash” and immutability shape your problem-solving mindset — you focus more on pipe-style transformations and lean heavily into control flow instead of mutable state.  
+- Elixir makes some problems stupidly elegant — and others feel like you're coding Lisp without a debugger.
+
+
+---
+
+
+## My thoughts on AoC2015
+
+It was fun at first (day 1 - 15), then a bit challenging around day 15 - 18, and it turns bombastic after that — peak torment on day 22.  
+I just feels like AoC supposed to be fun and doable by beginners, and it shouldn't took too much time from you (1 hour? 3 hours? 5 hours a day?).  
+When I decide to do sth, I expect to finish it, not just leave it half done.
+
+Day 19 onwards made me wanna quit occasionally, so I decided to just rush the last 5 days of AoC in a single day — to keep my morale high.  
+The later days are too demanding for me. With just a college workload, that's nothing compared to people with 9 to 5 jobs.  
+And it seems like later years of AoC are getting harder and harder, especially on part 2 that requires a full rewrite.
+
+So, next time I'd be a lot more considerate before starting an AoC.  
+It can be fun and you would glide through the first 15 days, but after that — it might cost something more than just your time.
+
+
 ---
